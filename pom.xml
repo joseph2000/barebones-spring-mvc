@@ -6,8 +6,8 @@
 	<packaging>war</packaging>
 	<version>0.0.1</version>
 	<properties>
-		<spring.version>3.0.4.RELEASE</spring.version>
-		<spring-security.version>3.0.3.RELEASE</spring-security.version>
+		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring-security.version>3.0.5.RELEASE</spring-security.version>
 	</properties>
 	<dependencies>
 
