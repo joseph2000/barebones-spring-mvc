@@ -1,5 +1,9 @@
 This is the source code for Barebones Spring MVC, an e-book based on the article series I started in 2009. It is a basic overview of some of the most commonly used components of Spring MVC 3.0, and takes the reader through the development of an example Spring MVC application from scratch.
 
-To build this code, use Maven:
+The top-level directory contains the source code for the book, as well as source code for each article that lead up to the book.  To build the code for any of the parts, switch to the corresponding subdirectory and run:
+
+> mvn package
+
+To build the main source code code run from the top-level directory:
 
 > mvn package
