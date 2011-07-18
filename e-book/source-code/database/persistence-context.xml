@@ -1,0 +1,33 @@
+<tx:annotation-driven />
+
+<context:annotation-config />
+
+<bean id="transactionManager"
+	class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	<property name="sessionFactory" ref="sessionFactory" />
+</bean>
+
+<bean class="com.earldouglas.barebones.springmvc.service.HibernateEmployeeService" />
+
+<bean id="sessionFactory"
+	class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+	init-method="createDatabaseSchema">
+	<property name="dataSource" ref="hsqlDataSource" />
+	<property name="packagesToScan" value="com.earldouglas.barebones.springmvc" />
+	<property name="hibernateProperties">
+		<props>
+			<prop key="hibernate.dialect">
+				org.hibernate.dialect.HSQLDialect
+			</prop>
+			<prop key="hibernate.show_sql">false</prop>
+		</props>
+	</property>
+</bean>
+
+<bean id="hsqlDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	destroy-method="close">
+	<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+	<property name="url" value="jdbc:hsqldb:mem:barebones-spring-mvc" />
+	<property name="username" value="sa" />
+	<property name="password" value="" />
+</bean>

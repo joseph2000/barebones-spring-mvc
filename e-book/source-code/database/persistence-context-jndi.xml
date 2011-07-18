@@ -1,0 +1,1 @@
+<jee:jndi-lookup id="hsqlDataSource" jndi-name="java:comp/env/jdbc/hsqlDataSource" />

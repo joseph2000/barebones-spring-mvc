@@ -1,0 +1,8 @@
+<servlet>
+	<servlet-name>Resources Servlet</servlet-name>
+	<servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Resources Servlet</servlet-name>
+	<url-pattern>/resources/*</url-pattern>
+</servlet-mapping>

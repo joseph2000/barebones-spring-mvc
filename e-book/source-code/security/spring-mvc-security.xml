@@ -1,0 +1,16 @@
+<!-- Enable Spring Security with HTTP basic authentication. -->
+<http auto-config="true">
+	<http-basic />
+	<intercept-url pattern="/**" access="ROLE_ADMIN" />
+	<form-login />
+</http>
+
+<!-- An AuthenticationProvider with sample users and roles. -->
+<authentication-manager>
+	<authentication-provider>
+		<user-service>
+			<user name="admin" password="password" 
+				authorities="ROLE_ADMIN" />
+		</user-service>
+	</authentication-provider>
+</authentication-manager>
